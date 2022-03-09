@@ -1,0 +1,35 @@
+<div class="container-fluid mt-3">
+
+
+
+
+<%=form_with model: Current.user, url: edit_password_path do |form|%>
+
+<% if form.object.errors.any? %> 
+		<div class="alert alert-danger">
+			<% form.object.errors.full_messages.each do |message|%>
+				<h2><%= message %></h2>
+			<% end %>
+		</div>
+	<% end %>
+
+
+	<div class="mb-3">
+		<%= form.label:password  %>
+		<%= form.password_field:password,class:"form-control",
+		placeholder:"password" %>
+	</div>
+
+
+	<div class="mb-3">
+		<%= form.label:password_confirmation  %>
+		<%= form.password_field:password_confirmation,class:"form-control",placeholder:"password" %>
+	</div>
+
+	<div class="mb-3 mt-4">
+		<%= form.submit "Update", class:"btn btn-dark" %>
+	</div>
+
+	</div>
+
+<% end %>

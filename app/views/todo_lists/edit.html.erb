@@ -1,0 +1,8 @@
+<div class="container-fluid mt-3">
+<h3>Editing Todo List</h3>
+
+<%= render 'form', todo_list: @todo_list %>
+
+<%= link_to 'Show', @todo_list,class:"btn btn-secondary mt-3 ml-3"%> 
+<%= link_to 'Back', todo_lists_path,class:"btn btn-secondary mt-3"%>
+</div>

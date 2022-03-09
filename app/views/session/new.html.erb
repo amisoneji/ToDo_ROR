@@ -1,0 +1,29 @@
+<div class="container-fluid mt-3">
+<h3>Sign In</h3>
+
+<%= form_with url:sign_in_path do |form| %>
+
+	<div class="mb-3 mt-3">
+		<%= form.label:email  %>
+		<%= form.text_field:email,class:"form-control",
+		placeholder:"example@example.com" %>
+	</div>
+
+	<div class="mb-3">
+		<%= form.label:password  %>
+		<%= form.password_field:password,class:"form-control",
+		placeholder:"password" %>
+	</div>
+
+	<div class="mb-3 mt-4">
+		<%= form.submit "Login", class:"btn btn-dark" %>
+	</div>
+
+	<div class="mb-3 mt-4">
+	<%= link_to "Forgot Your Password?",password_reset_path %>
+	</div>
+
+	
+
+<% end %>
+</div>
