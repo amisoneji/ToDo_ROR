@@ -72,6 +72,17 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.default_url_options={host:"localhost:3000"}
 
-  # Uncomment if you wish to allow Action Cable access from any origin.
-  # config.action_cable.disable_request_forgery_protection = true
+  
+
+
+
+ActionMailer::Base.smtp_settings = {
+  :user_name => 'ToDo App heroku', # This is the string literal 'apikey', NOT the ID of your API key
+  :password => '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', # This is the secret sendgrid API key which was issued during API key creation
+  :domain => 'https://shrouded-anchorage-55521.herokuapp.com/',
+  :address => 'smtp.sendgrid.net',
+  :port => 587,
+  :authentication => :plain,
+  :enable_starttls_auto => true
+}
 end
