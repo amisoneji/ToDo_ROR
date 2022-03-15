@@ -76,13 +76,4 @@ Rails.application.configure do
 
 
 
-ActionMailer::Base.smtp_settings = {
-  :user_name => 'ToDo App heroku', # This is the string literal 'apikey', NOT the ID of your API key
-  :password => , # This is the secret sendgrid API key which was issued during API key creation
-  :domain => 'https://shrouded-anchorage-55521.herokuapp.com/',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
 end
