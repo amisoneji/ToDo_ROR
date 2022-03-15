@@ -4,6 +4,8 @@ require_relative "application"
 # Initialize the Rails application.
 Rails.application.initialize!
 
+config.action_mailer.default_url_options = { :host => 'shrouded-anchorage-55521.herokuapp.com' }
+
 ActionMailer::Base.smtp_settings = {
   :user_name => 'apikey', # This is the string literal 'apikey', NOT the ID of your API key
   #:password => Rails.application.credentials.access_key_id),
