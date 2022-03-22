@@ -5,13 +5,17 @@ Rails.application.routes.draw do
   
   root to:"main#index"
 
+  #root to:"signin_todo#sessiontodo"
+
   get "about",to:"about#index"
+
+  post "sign_in",to:"signin_todo#sessiontodo"
 
   get "sign_up",to:"registration#new"
   post "sign_up",to:"registration#create"
 
   get "sign_in",to:"session#new"
-  post "sign_in",to:"session#create"
+  #post "sign_in",to:"session#create"
 
   delete "logout",to:"session#destroy"
 
@@ -23,5 +27,9 @@ Rails.application.routes.draw do
 
   get "password/reset/edit",to:"password_reset#edit"
   patch "password/reset/edit",to:"password_reset#update"
+
+  get "todays_list",to:"today#todaystask"
+  
+  get "upcoming_list",to:"upcoming#upcomingtask"
 
 end

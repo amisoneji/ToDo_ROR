@@ -3,17 +3,12 @@ class TodoListsController < ApplicationController
 
   # GET /todo_lists or /todo_lists.json
   def index
-
     @todo_lists = Current.user.todo_lists
-    #User.find_by(Current.user_id)
-    # @todo_list.user = Current.user
-
-    # @todo_lists = todo_list.all
-    #@todo_lists =Current.user.todo_list
+    
   end
 
   # GET /todo_lists/1 or /todo_lists/1.json
-   def show             
+   def show           
   end
 
   # GET /todo_lists/new
@@ -75,6 +70,6 @@ class TodoListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_list_params
-      params.require(:todo_list).permit(:title, :description)
+      params.require(:todo_list).permit(:title, :description, :Date)
     end
 end

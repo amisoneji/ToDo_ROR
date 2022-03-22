@@ -1,104 +1,16 @@
 <p id="notice"><%= notice %></p>
+<!-- <h3>Todo Lists</h3 -->
 
-<h3>Todo Lists</h3>
+<div class="container">
+  
+      <%= render 'shared/todolistindex' %>
 
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%#@todo_lists.each do |todo_list| %>
-      <tr>
-        <td><%#= todo_list.title %></td>
-        <td><%#= todo_list.description %></td>
-        <td><%#= link_to 'Show', todo_list %></td>
-        <td><%#= link_to 'Edit', edit_todo_list_path(todo_list) %></td>
-        <td><%#= link_to 'Destroy', todo_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <%#end %>
-  </tbody>
-</table>
-
-<br> -->
-
-<!-- <div class="row">
-  <%#@todo_lists.each do |todo_list| %>
-  <div class="col-sm-6">
-   
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%#= todo_list.title %></h5>
-        <p class="card-text"><%#= todo_list.description %></p>
-
-        <%#= link_to 'Show', todo_list,class:"btn btn-primary" %></td>
-        <%#= link_to 'Edit', edit_todo_list_path(todo_list),class:"btn btn-primary"%>
-        <td><%#= link_to 'Destroy', todo_list, method: :delete,class:"btn btn-primary",data: { confirm: 'Are you sure?' } %></td>
-      </div>
-       
-</div>
-<%#end %>
-</div>
-<%#= link_to 'New Todo List', new_todo_list_path,class:"btn btn-primary"%> -->
-<%# end %>
-
-
-<!-- <div class="row">
-  <%#@todo_lists.in_groups_of(2) do |todo_list1, todo_list2| %>
-  <div class="col-sm-6 h-50 ">
-    <div class="card ">
-      <div class="card-body ">
-        <h5 class="card-title"><%#= todo_list1.title %></h5>
-        <p class="card-text"><%#= todo_list1.description %></p>
-        <%#= link_to 'Show', todo_list1,class:"btn btn-primary" %></td>
-        <%#= link_to 'Edit', edit_todo_list_path(todo_list1),class:"btn btn-primary"%>
-        <%#= link_to 'Destroy', todo_list1, method: :delete,class:"btn btn-primary",data: { confirm: 'Are you sure?' } %>
-      </div>
     </div>
-  </div>
-  <div class="col-sm-6  h-50-">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><%#= todo_list2.title %></h5>
-        <p class="card-text"><%#= todo_list2.description %></p>
-        <%#= link_to 'Show', todo_list2,class:"btn btn-primary" %></td>
-        <%#= link_to 'Edit', edit_todo_list_path(todo_list2),class:"btn btn-primary"%>
-        <%#= link_to 'Destroy', todo_list2, method: :delete,class:"btn btn-primary",data: { confirm: 'Are you sure?' } %>
-      </div>
-    </div>
-  </div>
-<%# end %>
-</div> -->
 
-<div class="row">
-  <% @todo_lists.each do |todo_list| %>
-        
-    <section class="col-lg-4 col-md-6 py-3">
-       <div class="card border-info text-center mb-3" style="height:15rem;">
-        
-        <div class="card-header">
-          <h5 class="card-title"><%= todo_list.title %></h5>
-        </div>
-        
-        <div class="card-body" style="overflow-y: auto;">
-        <p class="card-text" style="overflow-y: auto;"><%= todo_list.description %></p>
-        </div>
-        
-        <div class="card-footer text-muted">
-        <%= link_to 'Show',todo_list,class:"btn btn-secondary" %>
-        <%= link_to 'Edit', edit_todo_list_path(todo_list),class:"btn btn-secondary"%>
-        <%= link_to 'Destroy', todo_list, method: :delete,class:" btn btn-secondary",data: { confirm: 'Are you sure?' } %>
-      </div>
 
-      </div>
-      </section>
-            
-    <% end %>
-</div>
+
+
+
 
 
 

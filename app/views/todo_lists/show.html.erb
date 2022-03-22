@@ -1,13 +1,14 @@
 
 
-<div class="container-fluid mt-5">
-<div class="card" style="width: 65rem;">
-  <div class="card-body">
-    <h3 class="card-title"><%= @todo_list.title %></h3>
-    <p class="card-text"><%= @todo_list.description %></p>
-    <%= link_to 'Edit', edit_todo_list_path(@todo_list),class:"btn btn-dark" %> 
-     <%= link_to 'destroy', todo_list_path, method: :delete,class:"btn btn-dark" %> 
-    <%= link_to 'Back', todo_lists_path,class:"btn btn-dark"%>
-  </div>
+    <div class="card" style="width: 65rem;">
+      <div class="card-body">
+        <h3 class="card-title"><%= @todo_list.try(:title) %></h3>
+        <p class="card-text"><%= @todo_list.try(:description) %></p>
+        <p class="card-text"><%= @todo_list.try(:Date) %></p>
+        <%= link_to 'Edit', edit_todo_list_path(@todo_list),class:"btn btn-dark" %> 
+         <%= link_to 'destroy', todo_list_path, method: :delete,class:"btn btn-dark" %> 
+        <%= link_to 'Back', todo_lists_path,class:"btn btn-dark"%>
+      </div>
+    </div>
 </div>
-</div>
+
